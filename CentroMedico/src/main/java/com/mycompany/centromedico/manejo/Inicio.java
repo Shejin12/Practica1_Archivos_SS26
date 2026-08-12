@@ -15,6 +15,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     
      private Pacientes pacientes = new Pacientes(this);
+     private Doctores doctores = new Doctores(this);
     
     public Inicio() {
         initComponents();
@@ -51,16 +52,21 @@ public class Inicio extends javax.swing.JFrame {
                 btn_pacientesActionPerformed(evt);
             }
         });
-        pnl_principal.add(btn_pacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
+        pnl_principal.add(btn_pacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
         btn_doctores.setText("Doctores");
-        pnl_principal.add(btn_doctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 80, -1));
+        btn_doctores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_doctoresActionPerformed(evt);
+            }
+        });
+        pnl_principal.add(btn_doctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 80, -1));
 
         btn_citas.setText("Citas");
-        pnl_principal.add(btn_citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 80, -1));
+        pnl_principal.add(btn_citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 80, -1));
 
         btn_reportes.setText("Reportes");
-        pnl_principal.add(btn_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 80, -1));
+        pnl_principal.add(btn_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 80, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +86,11 @@ public class Inicio extends javax.swing.JFrame {
         this.setVisible(false);
         pacientes.setVisible(true);
     }//GEN-LAST:event_btn_pacientesActionPerformed
+
+    private void btn_doctoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_doctoresActionPerformed
+        this.setVisible(false);
+        doctores.setVisible(true);
+    }//GEN-LAST:event_btn_doctoresActionPerformed
 
     /**
      * @param args the command line arguments
