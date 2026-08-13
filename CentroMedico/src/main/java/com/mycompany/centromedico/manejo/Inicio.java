@@ -15,7 +15,8 @@ public class Inicio extends javax.swing.JFrame {
      */
     
      private Pacientes pacientes = new Pacientes(this);
-     private Doctores doctores = new Doctores(this);
+     public Doctores doctores = new Doctores(this);
+     Autenticacion aut = new Autenticacion(this);
     
     public Inicio() {
         initComponents();
@@ -52,7 +53,7 @@ public class Inicio extends javax.swing.JFrame {
                 btn_pacientesActionPerformed(evt);
             }
         });
-        pnl_principal.add(btn_pacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
+        pnl_principal.add(btn_pacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
 
         btn_doctores.setText("Doctores");
         btn_doctores.addActionListener(new java.awt.event.ActionListener() {
@@ -60,10 +61,10 @@ public class Inicio extends javax.swing.JFrame {
                 btn_doctoresActionPerformed(evt);
             }
         });
-        pnl_principal.add(btn_doctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 80, -1));
+        pnl_principal.add(btn_doctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 80, -1));
 
         btn_citas.setText("Citas");
-        pnl_principal.add(btn_citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 80, -1));
+        pnl_principal.add(btn_citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 80, -1));
 
         btn_reportes.setText("Reportes");
         pnl_principal.add(btn_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 80, -1));
@@ -89,7 +90,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btn_doctoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_doctoresActionPerformed
         this.setVisible(false);
-        doctores.setVisible(true);
+        aut.setVisible(true);
     }//GEN-LAST:event_btn_doctoresActionPerformed
 
     /**
