@@ -39,7 +39,6 @@ public class Inicio extends javax.swing.JFrame {
         btn_pacientes = new javax.swing.JButton();
         btn_doctores = new javax.swing.JButton();
         btn_citas = new javax.swing.JButton();
-        btn_reportes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(500, 400));
@@ -53,7 +52,7 @@ public class Inicio extends javax.swing.JFrame {
                 btn_pacientesActionPerformed(evt);
             }
         });
-        pnl_principal.add(btn_pacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+        pnl_principal.add(btn_pacientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
 
         btn_doctores.setText("Doctores");
         btn_doctores.addActionListener(new java.awt.event.ActionListener() {
@@ -61,13 +60,10 @@ public class Inicio extends javax.swing.JFrame {
                 btn_doctoresActionPerformed(evt);
             }
         });
-        pnl_principal.add(btn_doctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 80, -1));
+        pnl_principal.add(btn_doctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 80, -1));
 
         btn_citas.setText("Citas");
-        pnl_principal.add(btn_citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 80, -1));
-
-        btn_reportes.setText("Reportes");
-        pnl_principal.add(btn_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 80, -1));
+        pnl_principal.add(btn_citas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 80, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,7 +98,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton btn_citas;
     private javax.swing.JButton btn_doctores;
     private javax.swing.JButton btn_pacientes;
-    private javax.swing.JButton btn_reportes;
     private javax.swing.JPanel pnl_principal;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,39 +4,42 @@
  */
 package com.mycompany.centromedico.datos;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author chejo
  */
 public class Paciente {
-    private int DPI, telefono;
-    private enum Sexo {MASCULINO, FEMENINO};
-    private Sexo sexoPaciente;
-    private enum Sangre {A_POSITIVO, A_NEGATIVO, B_POSITIVO, B_NEGATIVO, AB_POSITIVO, AB_NEGATIVO, O_POSITIVO, O_NEGATIVO};
-    private Sangre tipoSangre;
-    private String nombre, apellido, correo;
+    private String  DPI, telefono, nombre, apellido, correo, sexo, sangre;
+    private LocalDate fechaNacimiento;
+    private boolean activo;
 
-    public Paciente(int DPI, int telefono, String nombre, String apellido, String correo) {
+    public Paciente(String DPI, String telefono, String nombre, String apellido, String correo, String sexo, String sangre, LocalDate fechaNacimiento) {
         this.DPI = DPI;
         this.telefono = telefono;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
+        this.sexo = sexo;
+        this.sangre = sangre;
+        this.fechaNacimiento = fechaNacimiento;
+        this.activo = true;
     }
 
-    public int getDPI() {
+    public String getDPI() {
         return DPI;
     }
 
-    public void setDPI(int DPI) {
+    public void setDPI(String DPI) {
         this.DPI = DPI;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -63,21 +66,38 @@ public class Paciente {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
-    public void setSexo(boolean male){
-        sexoPaciente = (male) ? Sexo.MASCULINO : Sexo.FEMENINO;
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getSangre() {
+        return sangre;
+    }
+
+    public void setSangre(String sangre) {
+        this.sangre = sangre;
+    }
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
     
-    public void setSangre(String sangre){
-        switch (sangre) {
-            case "A+" ->    tipoSangre = Sangre.A_POSITIVO;
-            case "A-" ->    tipoSangre = Sangre.A_NEGATIVO;
-            case "B+" ->    tipoSangre = Sangre.B_POSITIVO;
-            case "B-" ->    tipoSangre = Sangre.B_NEGATIVO;
-            case "AB+" ->   tipoSangre = Sangre.AB_POSITIVO;
-            case "AB-" ->   tipoSangre = Sangre.AB_NEGATIVO;
-            case "O+" ->    tipoSangre = Sangre.O_POSITIVO;
-            case "O-" ->    tipoSangre = Sangre.O_NEGATIVO;
-        }
-    }
+    
 }

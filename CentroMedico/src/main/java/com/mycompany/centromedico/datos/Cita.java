@@ -10,14 +10,14 @@ import java.util.UUID;
  *
  * @author chejo
  */
-public class Citas {
+public class Cita {
     private UUID Id_Doctor;
     private int Id_Paciente;
     private String nombreDoctor, nombrePaciente, motivo, observaciones;
     private enum Estado {PROGRAMADA, ATENDIDA, CANCELADA};
     private Estado estadoCita;
 
-    public Citas(UUID Id_Doctor, int Id_Paciente, String doctor, String paciente, String motivo, String observaciones) {
+    public Cita(UUID Id_Doctor, int Id_Paciente, String doctor, String paciente, String motivo, String observaciones) {
         this.Id_Doctor = Id_Doctor;
         this.Id_Paciente = Id_Paciente;
         this.nombreDoctor = doctor;
